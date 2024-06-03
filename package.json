@@ -1,16 +1,37 @@
 {
-  "name": "myapp",
+  "name": "university-test-case",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "SET DEBUG=myapp:* & nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^16.3.1",
     "express": "~4.16.1",
+    "express-group-routes": "^1.1.0",
     "http-errors": "~1.6.3",
+    "module-alias": "^2.2.3",
     "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "mysql2": "^3.9.2",
+    "pug": "2.0.0-beta11",
+    "sequelize": "^6.33.0",
+    "validatorjs": "^3.22.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.2"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@config": "src/config",
+    "@lib-error": "src/lib/error",
+    "@lib-logger": "src/lib/logger",
+    "@lib-response": "src/lib/response",
+    "@common-module": "src/modules/common",
+    "@student-module": "src/modules/student",
+    "@study-plan-module": "src/modules/study-plan",
+    "@subject-module": "src/modules/subject"
   }
 }
